@@ -14,44 +14,31 @@ This repository provides filtered lists of near-duplicate MIDI files in the Lakh
 > All files are represented as `{first_hash_value}__{full_hash_value}`, corresponding to the path `lmd_full/{first_hash_value}/{full_hash_value}.mid`.  
 > **LMD-clean** refers to the Clean MIDI subset of LMD.
 
+| Filename                                                   | Use Case                                                                 | # Clusters | # Duplicates | Thresholds (CAugBERT / CLaMP) | Query Source | Key Source |
+|------------------------------------------------------------|--------------------------------------------------------------------------|------------|--------------|-------------------------------|---------------|-------------|
+| `CAugBERT_0.93_with_CLaMP_0.87_query_from_lmd_clean.json`  | Effectively remove highly duplicated popular tracks in LMD              | 6,650      | 13,304       | 0.93 / 0.87                   | LMD-clean     | LMD-full    |
+| `CAugBERT_0.93_with_CLaMP_0.87.json`                       | Aggressive deduplication for building a cleaner LMD                     | 23,566     | 68,075       | 0.93 / 0.87                   | LMD-full      | LMD-full    |
+| `CAugBERT_0.99_with_CLaMP_0.99.json`                       | High-precision filtering minimizing false positives                      | 20,797     | 38,134       | 0.99 / 0.99                   | LMD-full      | LMD-full    |
 
-#### `CAugBERT_0.93_with_CLaMP_0.87_query_from_lmd_clean.json`
 
-- Filtered duplicates using **LMD-clean** as query and **LMD-full** as key.  
-- Format:
-  ```json
-  {
-    "artist__songname": {
-      "survived_file": "xxx__yyy",
-      "remove_file_list": ["aaa__bbb", "ccc__ddd"]
-    }
+### 📄 JSON Format Examples
+
+<details>
+<summary><code>CAugBERT_0.93_with_CLaMP_0.87_query_from_lmd_clean.json</code></summary>
+
+```json
+{
+  "artist__songname": {
+    "survived_file": "xxx__yyy",
+    "remove_file_list": ["aaa__bbb", "ccc__ddd"]
   }
-  ```
-- Thresholds: CAugBERT 0.93 / CLaMP 0.87
-- Use case: To effectively remove highly duplicated popular tracks in LMD.
+}
+```
+</details> <details> <summary><code>CAugBERT_0.93_with_CLaMP_0.87.json</code> and <code>CAugBERT_0.99_with_CLaMP_0.99.json</code></summary>
 
-
-#### `CAugBERT_0.93_with_CLaMP_0.87.json`
-- Full LMD-full to LMD-full filtering with the proposed threshold.
-
-- Format:
-  ```json
-    {
-    "xxx__yyy": ["aaa__bbb", "ccc__ddd"]
-    }
-    ```
-- Thresholds: CAugBERT 0.93 / CLaMP 0.87
-
-- Use case: General-purpose deduplication for building a cleaner version of LMD, prioritizing aggressive duplicate removal.
-
-#### `CAugBERT_0.99_with_CLaMP_0.99.json`
-- Conservative filtering within LMD-full using a strict threshold.
-- Format:
-  ```json
-    {
-    "xxx__yyy": ["zzz__ttt"]
-    }
-    ```
-- Thresholds: CAugBERT 0.99 / CLaMP 0.99
-- Use case: High-precision filtering where false positives must be minimized.
-
+```json
+{
+  "xxx__yyy": ["aaa__bbb", "ccc__ddd"]
+}
+```
+</details>
