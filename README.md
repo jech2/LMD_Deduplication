@@ -35,7 +35,7 @@ This repository provides filtered lists of near-duplicate MIDI files in the Lakh
     "remove_file_list": [
       "1__1d78a66d4922a627ed4f195889613079",
       "3__316a42f7f290406c180df1507867127c",
-      // ... potentially more files
+      "..."
     ],
   }
 }
