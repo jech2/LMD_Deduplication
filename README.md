@@ -21,24 +21,34 @@ This repository provides filtered lists of near-duplicate MIDI files in the Lakh
 | `CAugBERT_0.99_with_CLaMP_0.99.json`                       | High-precision filtering minimizing false positives                      | 20,797     | 38,134       | 0.99 / 0.99                   | LMD-full      | LMD-full    |
 
 
-### 📄 JSON Format Examples
+### JSON Format Examples
 
 <details>
 <summary><code>CAugBERT_0.93_with_CLaMP_0.87_query_from_lmd_clean.json</code></summary>
 
+> The outermost key follows the format: **`artist__songname`**
+
 ```json
 {
-  "artist__songname": {
-    "survived_file": "xxx__yyy",
-    "remove_file_list": ["aaa__bbb", "ccc__ddd"]
+  "ABBA__Dancing Queen": {
+    "survived_file": "6__6d2cc12aea112c3d15c2fc68025d3b5f",
+    "remove_file_list": [
+      "1__1d78a66d4922a627ed4f195889613079",
+      "3__316a42f7f290406c180df1507867127c",
+      // ... potentially more files
+    ],
   }
 }
+
 ```
 </details> <details> <summary><code>CAugBERT_0.93_with_CLaMP_0.87.json</code> and <code>CAugBERT_0.99_with_CLaMP_0.99.json</code></summary>
 
 ```json
 {
-  "xxx__yyy": ["aaa__bbb", "ccc__ddd"]
+    "d__d36a255aa705b018ae00ca64d1097c9b": [
+    "3__3c59315eb2009726e1fb91edfada751b",
+    "9__9f7380937414e5e675a4c6b3fa49e95b"
+    ],
 }
 ```
 </details>
