@@ -1,6 +1,7 @@
 # On the De-duplication of the Lakh MIDI Dataset
 
-This repository provides the full pipeline for detecting and filtering duplicate MIDI files in the Lakh MIDI Dataset (LMD).
+This is the official repository for our paper:  
+**“On the De-duplication of the Lakh MIDI Dataset”** (submitted for ISMIR 2025)
 
 ## Links
 
