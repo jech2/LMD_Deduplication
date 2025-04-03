@@ -2,14 +2,11 @@
 
 This repository provides filtered lists of near-duplicate MIDI files in the Lakh MIDI Dataset (LMD), using embedding similarity from CAugBERT and CLaMP models.
 
----
 
 ## Links
 
 - **Interactive Demo:** [Anonymized Demo Page](https://anonymous-researcher-mir.github.io/lmd_deduplication/)
 - **Original Dataset:** [Lakh MIDI Dataset](https://colinraffel.com/projects/lmd/)
-
----
 
 ## Description of Files in `lmd_filtered_list` Folder
 
@@ -17,7 +14,6 @@ This repository provides filtered lists of near-duplicate MIDI files in the Lakh
 > All files are represented as `{first_hash_value}__{full_hash_value}`, corresponding to the path `lmd_full/{first_hash_value}/{full_hash_value}.mid`.  
 > **LMD-clean** refers to the Clean MIDI subset of LMD.
 
----
 
 #### `CAugBERT_0.93_with_CLaMP_0.87_query_from_lmd_clean.json`
 
