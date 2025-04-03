@@ -1,7 +1,6 @@
 # On the De-duplication of the Lakh MIDI Dataset
 
-This is the official repository for our paper:  
-**“On the De-duplication of the Lakh MIDI Dataset”** (submitted for ISMIR 2025)
+This is the official repository for our paper: **“On the De-duplication of the Lakh MIDI Dataset”** (submitted for ISMIR 2025)
 
 ## Links
 
