@@ -6,10 +6,9 @@ This folder contains precomputed lists of duplicated MIDI files in the Lakh MIDI
 
 ## Available Filtering Lists
 > **LMD-clean** refers to the Clean MIDI subset of LMD.
-
 | Filename                                                   | Use Case                                                                 | # Clusters | # Duplicates | Thresholds (CAugBERT / CLaMP) | Query Source | Key Source |
 |------------------------------------------------------------|--------------------------------------------------------------------------|------------|--------------|-------------------------------|---------------|-------------|
-| `CAugBERT_0.93_with_CLaMP_0.87_query_from_lmd_clean.json`  | Effectively remove highly duplicated popular tracks in LMD              | 6,650      | 13,304       | 0.93 / 0.87                   | LMD-clean     | LMD-full    |
+| `CAugBERT_0.99_with_CLaMP_0.99_query_from_lmd_clean.json`  | Effectively remove highly duplicated popular tracks in LMD              | 5,558      | 20,679       | 0.99 / 0.99                   | LMD-clean     | LMD-full    |
 | `CAugBERT_0.93_with_CLaMP_0.87.json`                       | Aggressive deduplication for building a cleaner LMD                     | 23,566     | 68,075       | 0.93 / 0.87                   | LMD-full      | LMD-full    |
 | `CAugBERT_0.99_with_CLaMP_0.99.json`                       | High-precision filtering minimizing false positives                      | 20,797     | 38,134       | 0.99 / 0.99                   | LMD-full      | LMD-full    |
 
