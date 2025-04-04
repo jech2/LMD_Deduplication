@@ -12,7 +12,7 @@ This is the official repository for our paper: **“On the De-duplication of the
 
 You can directly access the duplicate filtering results:
 
-[`lmd_filtering_list/`](./lmd_filtering_list) — includes CAugBERT + CLaMP filtered MIDI file lists
+lmd_filtering_list/ — includes CAugBERT + CLaMP filtered MIDI file lists
 
 See detailed descriptions and format examples in the folder's [README](./lmd_filtering_list/README.md).
 
