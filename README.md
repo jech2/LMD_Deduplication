@@ -4,7 +4,7 @@ This is the official repository for our paper: **“On the De-duplication of the
 
 ## Links
 
-- **Interactive Demo:** [Anonymized Demo Page](https://anonymous-researcher-mir.github.io/lmd_deduplication/)
+- **Interactive Demo:** [Demo Page](https://jech2.github.io/LMD_Deduplication/)
 - **Original Dataset:** [Lakh MIDI Dataset](https://colinraffel.com/projects/lmd/)
 
 
