@@ -16,3 +16,10 @@ lmd_filtering_list/ — includes CAugBERT + CLaMP filtered MIDI file lists
 
 See detailed descriptions and format examples in the folder's [README](./lmd_filtering_list/README.md).
 
+## Citation
+@inproceedings{{lmd_dedup_2025},
+         author = {Eunjin Choi, Hyerin Kim, Jiwoo Ryu, Juhan Nam, Dasaem Jeong},
+         title = {On the de-duplication of the Lakh {MIDI} dataset},
+         booktitle = {Proc. Int. Society for Music Information Retrieval Conf.},
+         year = {2025}
+}
