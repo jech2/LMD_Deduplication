@@ -1,10 +1,10 @@
 # On the De-duplication of the Lakh MIDI Dataset
 
-This is the official repository for our paper: **“On the De-duplication of the Lakh MIDI Dataset”** (submitted to ISMIR 2025)
+This is the official repository for our paper: **“On the De-duplication of the Lakh MIDI Dataset”** (ISMIR 2025)
 
 ## Links
 
-- **Interactive Demo:** [Anonymized Demo Page](https://anonymous-researcher-mir.github.io/lmd_deduplication/)
+- **Interactive Demo:** [Demo Page](https://jech2.github.io/LMD_Deduplication/)
 - **Original Dataset:** [Lakh MIDI Dataset](https://colinraffel.com/projects/lmd/)
 
 
