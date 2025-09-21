@@ -3,9 +3,10 @@
 This is the official repository for our paper: **“On the De-duplication of the Lakh MIDI Dataset”** (ISMIR 2025)
 
 ## Links
-
+- **[Paper](https://ismir2025program.ismir.net/poster_188.html)**
 - **Interactive Demo:** [Demo Page](https://jech2.github.io/LMD_Deduplication/)
 - **Original Dataset:** [Lakh MIDI Dataset](https://colinraffel.com/projects/lmd/)
+
 
 
 ## Quick Access: Filtered Lists
