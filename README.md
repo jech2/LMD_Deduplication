@@ -7,7 +7,8 @@ This is the official repository for our paper: **“On the De-duplication of the
 - **Interactive Demo:** [Demo Page](https://jech2.github.io/LMD_Deduplication/)
 - **Original Dataset:** [Lakh MIDI Dataset](https://colinraffel.com/projects/lmd/)
 
-
+## TODO
+- update training and evaluation codes
 
 ## Quick Access: Filtered Lists
 
