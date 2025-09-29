@@ -39,33 +39,32 @@ $ poetry run python -m contrastive_musicbert.data.convert_octuple
 
 ## Train
 ```
-# This will also create data_cache (which contains the indices of all tokenized midi segments(splitted))
-# Experiments were done on two A6000 GPUs.
 poetry run python train.py 
 ```
+- This will also create data_cache (which contains the indices of all tokenized midi segments(splitted))
+- Experiments were done on two A6000 GPUs.
 
-# Inference
+## Inference
 ```
-# Extract embeddings (check yamls/inference.yaml for configs)
 poetry run python inference.py
 ```
+- Extract embeddings (check yamls/inference.yaml for configs)
 
-# Retrieval
+## Retrieval
 ```
-# Use `save_embedding_list_only=True` to save only embedding lists
 poetry run python retrieval.py
 ```
+- Use `save_embedding_list_only=True` to save only embedding lists
 
-# Evaluate
+## Evaluate
 ```
-# Make sure that all extracted embeddings are in the ./inference folder, and the directories are set in the `evaluation_models.json` file.
 # Equalize query/ref files across model conditions
 poetry run python filter_samples_before_evaluation.py 
 
 # Run evaluations with retrieval and classification metrics
 poetry run python evaluate_all.py
 ```
-
+- Make sure that all extracted embeddings are in the ./inference folder, and the directories are set in the `evaluation_models.json` file.
 # De-duplication
 - See notebooks for the actual de-duplication process: `deduplicate_lmd_full.ipynb` and `de-duplicate_lmd_full_query_with_lmd_clean.ipynb`.
 - Requirements: 1× A6000 GPU (~40GB VRAM) and ~50GB RAM
