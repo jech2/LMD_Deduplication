@@ -10,7 +10,7 @@ This is the official repository for our paper: **“On the De-duplication of the
 - **Pre-computed LMD embeddings:** [HuggingFace](https://huggingface.co/datasets/jech2/lmd-dedup-supplements)
 
 ## Update Logs
-- 25.09.29: Update training and evaluation codes, embeddings and pre-trained models
+- 25.09.29: Update training, inference, evaluation codes, embeddings and pre-trained models
 
 ## Quick Access: Filtered Lists
 
