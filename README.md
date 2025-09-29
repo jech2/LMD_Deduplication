@@ -3,7 +3,7 @@
 This is the official repository for our paper: **“On the De-duplication of the Lakh MIDI Dataset”** (ISMIR 2025)
 
 ## Links
-- **[ISMIR miniconf](https://ismir2025program.ismir.net/poster_188.html)** [[arXiv](https://arxiv.org/abs/2509.16662)]
+- **Paper:** [ISMIR miniconf](https://ismir2025program.ismir.net/poster_188.html) [arXiv](https://arxiv.org/abs/2509.16662)
 - **Interactive Demo:** [Demo Page](https://jech2.github.io/LMD_Deduplication/)
 - **Original Dataset:** [Lakh MIDI Dataset](https://colinraffel.com/projects/lmd/)
 - **Pre-trained CAugBERT Checkpoint:** [HuggingFace](https://huggingface.co/jech2/lmd-dedup-caugbert)
