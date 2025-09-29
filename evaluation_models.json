@@ -1,0 +1,13 @@
+{
+    "Ours_w.o_contrastive": "lmd_dup_to_lmd_clean_0.95__no_contrastive.npy",
+    "Ours": "lmd_dup_to_lmd_clean_0.95__caugbert_embedding.npy",
+    "CLaMP-512": "lmd_clean_to_lmd_clean_0.9__clamp_feature_512.npy",
+    "CLaMP-1024": "lmd_clean_to_lmd_clean_0.9__clamp_feature_1024.npy",
+    "CLaMP2": "lmd_dup_to_lmd_clean_0.95_clamp2_.npy",
+    "CLaMP3": "lmd_dup_to_lmd_clean_0.95_clamp3_.npy",
+    "MusicBERT_base": "lmd_dup_to_lmd_clean_0.95_musicbert",
+    "MusicBERT_small": "lmd_dup_to_lmd_clean_0.95_musicbert_small",
+    "Beat Entropy": "beat_entropy",
+    "MIDI Chroma DTW": "pitch_dtw",
+    "MIDI Encoding Hash": "encoding_hash"
+}

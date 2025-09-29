@@ -1,0 +1,42 @@
+random_seed: 0
+batch_size: 64
+num_workers: 8
+dim: 512
+depth: 4
+heads: 8
+max_len: 1024
+rate: 0
+masking: 0.8
+replace: 0.1
+loss_weights:
+  - 1
+  - 0
+lr: 1e-4
+epochs: 100
+warm_up: 10000
+total_steps: 250000
+temp: 0.1
+gpus:
+  - 0
+  - 1
+mode:
+  - BERT
+pin_memory: false
+folder_path: ./data/lmd_filt_octuple_reduced/
+debug: false
+split_path: lakh_split_files_reduced.pkl
+pretrained_path: null
+masking_strategy:
+  - element
+  - compound
+  - bar
+val_check_interval: 0.25
+hydra:
+  run:
+    dir: 'experiments/${now:%Y%m%d}-${now:%H%M%S}'
+checkpoint_folder: null
+checkpoint_file: null
+cache_path: dataset_cache_reduced/dataset_cache.pkl
+run_mode: train
+resume: False
+use_reduced_vocab: True

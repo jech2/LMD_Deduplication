@@ -1,0 +1,8 @@
+checkpoint_folder: experiments/20240408-040737
+checkpoint_file: checkpoints/last.ckpt
+file_ext: _debug.npy
+thres: null
+pitch_augment_value: null
+velocity_augment_value: null
+aug_mode: []
+change_midi_content: True

@@ -1,0 +1,5 @@
+checkpoint_folder: 'experiments/20240409-010040'
+checkpoint_file: "checkpoints/last.ckpt"
+file_ext: '_caugbert_embedding.npy'
+embedding_mode: CLS
+infer_dataset: lmd_clean

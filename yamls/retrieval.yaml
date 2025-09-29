@@ -1,0 +1,9 @@
+qry_dataset: lmd_dup
+ref_dataset: lmd_clean
+result_dir: ./inference/
+file_ext: _caugbert_embedding.npy
+thres: 0.95
+avg_embedding: false
+save_embedding_list_only: false
+save_samples: false
+compress_dir: false

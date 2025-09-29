@@ -3,12 +3,13 @@
 This is the official repository for our paper: **“On the De-duplication of the Lakh MIDI Dataset”** (ISMIR 2025)
 
 ## Links
-- **[Paper](https://ismir2025program.ismir.net/poster_188.html)**
+- **[ISMIR miniconf](https://ismir2025program.ismir.net/poster_188.html)** [[arXiv](https://arxiv.org/abs/2509.16662)]
 - **Interactive Demo:** [Demo Page](https://jech2.github.io/LMD_Deduplication/)
 - **Original Dataset:** [Lakh MIDI Dataset](https://colinraffel.com/projects/lmd/)
 
 ## TODO
-- update training and evaluation codes
+- update training and evaluation codes -> updated 25.09.29
+- update embeddings
 
 ## Quick Access: Filtered Lists
 
@@ -17,6 +18,57 @@ You can directly access the duplicate filtering results:
 lmd_filtering_list/ — includes CAugBERT + CLaMP filtered MIDI file lists
 
 See detailed descriptions and format examples in the folder's [README](./lmd_filtering_list/README.md).
+
+## Installation
+```
+poetry install
+```
+
+## Preprocess
+
+### Get Dataset Metadata
+- De-duplication metadata are stored in: `./contrastive_musicbert/metadata/`
+- Ensure paths to clean_midi and lmd_full are set in: `./contrastive_musicbert/metadata/filepaths.py`
+- To check how these metadata are generated, run:
+`poetry run python -m contrastive_musicbert.metadata.get_all_dataset_metadata`
+
+### Tokenization of MIDI files
+```
+$ poetry run python -m contrastive_musicbert.data.convert_octuple
+```
+
+## Train
+```
+# This will also create data_cache (which contains the indices of all tokenized midi segments(splitted))
+# Experiments were done on two A6000 GPUs.
+poetry run python train.py 
+```
+
+# Inference
+```
+# Extract embeddings (check yamls/inference.yaml for configs)
+poetry run python inference.py
+```
+
+# Retrieval
+```
+# Use `save_embedding_list_only=True` to save only embedding lists
+poetry run python retrieval.py
+```
+
+# Evaluate
+```
+# Make sure that all extracted embeddings are in the ./inference folder, and the directories are set in the `evaluation_models.json` file.
+# Equalize query/ref files across model conditions
+poetry run python filter_samples_before_evaluation.py 
+
+# Run evaluations with retrieval and classification metrics
+poetry run python evaluate_all.py
+```
+
+# De-duplication
+- See notebooks for the actual de-duplication process: `deduplicate_lmd_full.ipynb` and `de-duplicate_lmd_full_query_with_lmd_clean.ipynb`.
+- Requirements: 1× A6000 GPU (~40GB VRAM) and ~50GB RAM
 
 ## Citation
 ```

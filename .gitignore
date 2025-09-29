@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+__pycache__
+*.py[cod]
+*$py.class
+
+*.pt
+
+.png
+.jpg
+.ipynb_checkpoints
+
+inference/
+lightning_logs/
+model/
+wandb/
+data
+experiments/
