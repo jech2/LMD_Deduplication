@@ -73,10 +73,10 @@ poetry run python evaluate_all.py
 
 ## Citation
 ```
-@inproceedings{{lmd_dedup_2025},
-         author = {Eunjin Choi, Hyerin Kim, Jiwoo Ryu, Juhan Nam, Dasaem Jeong},
-         title = {On the de-duplication of the Lakh {MIDI} dataset},
-         booktitle = {Proc. Int. Society for Music Information Retrieval Conf.},
-         year = {2025}
+@inproceedings{lmd_dedup_2025,
+  author    = {Eunjin Choi and Hyerin Kim and Jiwoo Ryu and Juhan Nam and Dasaem Jeong},
+  title     = {On the De-duplication of the Lakh {MIDI} Dataset},
+  booktitle = {Proceedings of the International Society for Music Information Retrieval Conference (ISMIR)},
+  year      = {2025}
 }
 ```
