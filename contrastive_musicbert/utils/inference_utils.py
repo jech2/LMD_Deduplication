@@ -59,15 +59,16 @@ def debug_inference(model, vocab, ref_query="Van Halen__Jump"):
     return ret_item
        
 def get_tokenized_seq(midi_path, file_ext, vocab):
-        if os.path.exists(midi_path.replace('.mid', file_ext)):
-            seq = np.load(midi_path.replace('.mid', file_ext))
-        else:
-            midi = Score(midi_path)
-            tokens = vocab(midi)  # calling the tokenizer will automatically detect MIDIs, paths and tokens
-            seq = np.array(tokens)
-            
-            np.save(midi_path.replace('.mid', file_ext), seq)
-        return seq
+    npy_path = midi_path.with_name(midi_path.stem + file_ext)
+    if os.path.exists(npy_path):
+        seq = np.load(npy_path)
+    else:
+        midi = Score(midi_path)
+        tokens = vocab(midi)  # calling the tokenizer will automatically detect MIDIs, paths and tokens
+        seq = np.array(tokens)
+        
+        np.save(npy_path, seq)
+    return seq
     
 def get_subseqs(seq, min_seq_len=100, max_seq_len=1024, midi_path=None, file_ext=None, out_dir=None):
     subseqs = split_seq_in_subsequences(seq, min_seq_len=min_seq_len, max_seq_len=max_seq_len)

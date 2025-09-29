@@ -6,10 +6,11 @@ This is the official repository for our paper: **“On the De-duplication of the
 - **[ISMIR miniconf](https://ismir2025program.ismir.net/poster_188.html)** [[arXiv](https://arxiv.org/abs/2509.16662)]
 - **Interactive Demo:** [Demo Page](https://jech2.github.io/LMD_Deduplication/)
 - **Original Dataset:** [Lakh MIDI Dataset](https://colinraffel.com/projects/lmd/)
+- **Pre-trained CAugBERT Checkpoint:** [HuggingFace](https://huggingface.co/jech2/lmd-dedup-caugbert)
+- **Pre-computed LMD embeddings:** [HuggingFace](https://huggingface.co/datasets/jech2/lmd-dedup-supplements)
 
-## TODO
-- update training and evaluation codes -> updated 25.09.29
-- update embeddings
+## Update Logs
+- Update training and evaluation codes, embeddings and pre-trained models -> updated 25.09.29
 
 ## Quick Access: Filtered Lists
 
@@ -65,7 +66,8 @@ poetry run python filter_samples_before_evaluation.py
 poetry run python evaluate_all.py
 ```
 - Make sure that all extracted embeddings are in the ./inference folder, and the directories are set in the `evaluation_models.json` file.
-# De-duplication
+
+## De-duplication
 - See notebooks for the actual de-duplication process: `deduplicate_lmd_full.ipynb` and `de-duplicate_lmd_full_query_with_lmd_clean.ipynb`.
 - Requirements: 1× A6000 GPU (~40GB VRAM) and ~50GB RAM
 
