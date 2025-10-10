@@ -38,6 +38,19 @@ poetry install
 $ poetry run python -m contrastive_musicbert.data.convert_octuple
 ```
 
+#### ⚠️ Fix for pitch_range Error 
+If you see
+ValueError: pitch_range must be within 0 and 127 (received (0, 128)),
+
+edit the file:
+`.venv/lib/python3.10/site-packages/miditok/classes.py`
+
+Change the condition to:
+
+```
+0 <= pitch_range[0] < pitch_range[1] <= 128
+```
+
 ## Train
 ```
 poetry run python train.py 
