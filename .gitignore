@@ -12,7 +12,5 @@ __pycache__
 
 inference/
 lightning_logs/
-model/
 wandb/
-data
 experiments/
